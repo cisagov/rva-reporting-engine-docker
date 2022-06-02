@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Push the README.md file to the docker hub repository
+# Push the README.md file to the Docker Hub repository
 
 # Requires the following environment variables to be set:
 # DOCKER_PASSWORD, DOCKER_USERNAME, IMAGE_NAME
@@ -17,13 +17,13 @@ token=$(curl --silent --request POST \
   https://hub.docker.com/v2/users/login/ | jq --raw-output .token)
 
 echo "Pushing README file..."
-code=$(jq --null-input --arg msg "$(<README.md)" \
-  '{"registry":"registry-1.docker.io","full_description": $msg }' | \
-      curl --silent --output /dev/null --location --write-out "%{http_code}" \
-         https://hub.docker.com/v2/repositories/"${IMAGE_NAME}"/ \
-         --data @- --request PATCH \
-         --header "Content-Type: application/json" \
-         --header "Authorization: JWT ${token}")
+code=$(jq --null-input --arg msg "$(< README.md)" \
+  '{"registry":"registry-1.docker.io","full_description": $msg }' \
+  | curl --silent --output /dev/null --location --write-out "%{http_code}" \
+    https://hub.docker.com/v2/repositories/"${IMAGE_NAME}"/ \
+    --data @- --request PATCH \
+    --header "Content-Type: application/json" \
+    --header "Authorization: JWT ${token}")
 
 if [[ "${code}" = "200" ]]; then
   printf "Successfully pushed README to Docker Hub"
