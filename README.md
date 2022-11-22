@@ -9,6 +9,7 @@
 [![CodeQL](https://github.com/cisagov/skeleton-docker/workflows/CodeQL/badge.svg)](https://github.com/cisagov/skeleton-docker/actions/workflows/codeql-analysis.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/cisagov/skeleton-docker/badge.svg)](https://snyk.io/test/github/cisagov/skeleton-docker)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 46732472c238367e5b21bea88f9081a6a7cef7aa
 =======
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/skeleton-docker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/skeleton-docker/alerts/)
@@ -17,6 +18,8 @@
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/skeleton-docker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/skeleton-docker/context:python)
 -->
 >>>>>>> 6f639fe050f3435ce9f57989578ee9a10bec3a21
+=======
+>>>>>>> 81f6c715c46ca4b1266a5a3ab1d8a1d041b63411
 
 ## Docker Image ##
 
